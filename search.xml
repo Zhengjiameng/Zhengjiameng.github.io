@@ -4,9 +4,22 @@
   
     
     <entry>
+      <title>实战Taro出现的规范-比较不习惯的点</title>
+      <link href="/2019/01/07/%E5%AE%9E%E6%88%98Taro%E5%87%BA%E7%8E%B0%E7%9A%84%E8%A7%84%E8%8C%83-%E6%AF%94%E8%BE%83%E4%B8%8D%E4%B9%A0%E6%83%AF%E7%9A%84%E7%82%B9/"/>
+      <url>/2019/01/07/%E5%AE%9E%E6%88%98Taro%E5%87%BA%E7%8E%B0%E7%9A%84%E8%A7%84%E8%8C%83-%E6%AF%94%E8%BE%83%E4%B8%8D%E4%B9%A0%E6%83%AF%E7%9A%84%E7%82%B9/</url>
+      
+        <content type="html"><![CDATA[<p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>欢迎来到我的博客</title>
-      <link href="/2018/12/29/page01/"/>
-      <url>/2018/12/29/page01/</url>
+      <link href="/2018/12/29/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2018/12/29/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
       
         <content type="html"><![CDATA[<p>欢迎来到我的博客<br><a id="more"></a></p>]]></content>
       
@@ -29,11 +42,11 @@
     
     
     <entry>
-      <title>Hello Alice</title>
-      <link href="/2018/12/28/hello-world/"/>
-      <url>/2018/12/28/hello-world/</url>
+      <title>实战Taro父子组件的通讯问题</title>
+      <link href="/2018/12/28/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/"/>
+      <url>/2018/12/28/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>其实不叫做父子组件，是page和component之间的通讯，但是想了想，组件也是可以嵌套使用，还是用父子组件来的好</p><h2 id="父组件向子组件传递参数"><a href="#父组件向子组件传递参数" class="headerlink" title="父组件向子组件传递参数"></a>父组件向子组件传递参数</h2><p>主要是通过props来传递属性，暂不细说</p><a id="more"></a><h2 id="子组件触发父组件传递过去的函数"><a href="#子组件触发父组件传递过去的函数" class="headerlink" title="子组件触发父组件传递过去的函数"></a>子组件触发父组件传递过去的函数</h2><p>同样是通过props传递，但是传递的类型不是属性，而是函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ onCallbackParent=&#123;this.goToDetail.bind(this,item)&#125; /*父组件*/</span><br></pre></td></tr></table></figure></p><p>然后在子组件里面触发这个函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;View className=<span class="string">'list'</span> onClick=&#123;this.props.onCallbackParent&#125;&gt;</span><br><span class="line">$    ...</span><br><span class="line">$ &lt;/View&gt; /*子组件*/</span><br></pre></td></tr></table></figure></p><p>这里需要注意的是：1、父组件传递函数的时候，必须要加上‘on’</p><h2 id="子组件触发父组件传递过去的函数的作用"><a href="#子组件触发父组件传递过去的函数的作用" class="headerlink" title="子组件触发父组件传递过去的函数的作用"></a>子组件触发父组件传递过去的函数的作用</h2><p>主要是为了能够将逻辑都写在父组件里，保证子组件的简单，这样子后期复用性高</p>]]></content>
       
       
       

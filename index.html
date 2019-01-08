@@ -176,7 +176,50 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2018/12/29/page01/">
+          <a href="/2019/01/07/实战Taro出现的规范-比较不习惯的点/">
+              
+                  实战Taro出现的规范-比较不习惯的点
+              
+          </a>
+      </h2>
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-07
+      </time>
+    
+
+    
+      
+
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+        <p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class="post-wrapper">
+            <article class="post reveal ">
+    
+<section class="meta">
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/12/29/欢迎来到我的博客/">
               
                   欢迎来到我的博客
               
@@ -209,7 +252,7 @@
         <p>欢迎来到我的博客<br></p>
         
             <div class="readmore">
-                <a href="/2018/12/29/page01/" class="flat-box">
+                <a href="/2018/12/29/欢迎来到我的博客/" class="flat-box">
                     <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
                     阅读全文
                 </a>
@@ -236,9 +279,9 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2018/12/28/hello-world/">
+          <a href="/2018/12/28/实战Taro父子组件的通讯问题/">
               
-                  Hello Alice
+                  实战Taro父子组件的通讯问题
               
           </a>
       </h2>
@@ -261,11 +304,11 @@
 </section>
 
     <section class="article typo">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p>其实不叫做父子组件，是page和component之间的通讯，但是想了想，组件也是可以嵌套使用，还是用父子组件来的好</p>
+<h2 id="父组件向子组件传递参数"><a href="#父组件向子组件传递参数" class="headerlink" title="父组件向子组件传递参数"></a>父组件向子组件传递参数</h2><p>主要是通过props来传递属性，暂不细说</p>
         
             <div class="readmore">
-                <a href="/2018/12/28/hello-world/" class="flat-box">
+                <a href="/2018/12/28/实战Taro父子组件的通讯问题/" class="flat-box">
                     <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
                     阅读全文
                 </a>
