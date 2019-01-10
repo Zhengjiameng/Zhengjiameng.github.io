@@ -176,9 +176,9 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2019/01/07/实战Taro出现的规范-比较不习惯的点/">
+          <a href="/2019/01/10/实战Taro出现的坑/">
               
-                  实战Taro出现的规范-比较不习惯的点
+                  实战Taro出现的坑
               
           </a>
       </h2>
@@ -186,7 +186,52 @@
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-07
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-10
+      </time>
+    
+
+    
+      
+
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+        <p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>
+<p>2、引用本地静态资源，用import进去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import searchPng from <span class="string">'../../images/right.png'</span></span><br><span class="line">$  &lt;Image src=&#123;searchPng&#125; className=<span class="string">'right'</span>&gt;&lt;/Image&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3、新增page的时候，需要主动在app.tsx里面添加page页面</p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+    
+        <div class="post-wrapper">
+            <article class="post reveal ">
+    
+<section class="meta">
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/">
+              
+                  实战Taro自定义的下拉刷新和上拉加载
+              
+          </a>
+      </h2>
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-08
       </time>
     
 
