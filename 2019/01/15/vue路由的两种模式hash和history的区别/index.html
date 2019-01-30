@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>实战Taro出现的坑 | Alice</title>
+  <title>vue路由的两种模式hash和history的区别 | Alice</title>
   
   
 
@@ -171,13 +171,13 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">实战Taro出现的坑</h1>
+          <h1 class="title">vue路由的两种模式hash和history的区别</h1>
       
     
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-10
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-15
       </time>
     
 
@@ -200,14 +200,12 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>2、引用本地静态资源，用import进去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import searchPng from <span class="string">'../../images/right.png'</span></span><br><span class="line">$  &lt;Image src=&#123;searchPng&#125; className=<span class="string">'right'</span>&gt;&lt;/Image&gt;</span><br></pre></td></tr></table></figure></p>
-<p>3、新增page的时候，需要主动在app.tsx里面添加page页面</p>
+            <p>项目遇到问题，用history打包出现问题：hash路由的话，我们只请求了头部#前面的url路径，其余的#后面的，只是我们的前端路由，用来加载不同的组件，我们并不是通过url来请求后台数据的，<br>我们是通过组件的生命周期调用接口，请求后台数据，用history就会产生将整个url都用做http请求，然后向后台请求数据，当页面刷新的时候，用history就会出现404页面查找不到，<br>这个时候就需要后台配置，将所有的情况，都重定向到index.html</p>
 
         </div>
         
           <section class="meta" id="footer-meta">
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-10T16:45:59+08:00" content="2019-01-10"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-10</time>
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-15T11:36:10+08:00" content="2019-01-15"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-15</time>
               
               
 
@@ -221,9 +219,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2019/01/15/vue路由的两种模式hash和history的区别/" rel="prev" title="vue路由的两种模式hash和history的区别">
+                                <a href="/2019/01/21/2019年学习的目标/" rel="prev" title="2019年学习的目标">
                                   
-                                      vue路由的两种模式hash和history的区别
+                                      2019年学习的目标
                                   
                                 </a>
                             </h4>
@@ -236,9 +234,9 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/" rel="prev" title="实战Taro自定义的下拉刷新和上拉加载">
+                                <a href="/2019/01/10/实战Taro出现的坑/" rel="prev" title="实战Taro出现的坑">
                                     
-                                        实战Taro自定义的下拉刷新和上拉加载
+                                        实战Taro出现的坑
                                     
                                 </a>
                             </h4>
@@ -272,13 +270,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
+                <li><a href="http://yoursite.com/2019/01/23/随堂笔记/">koa随堂笔记</a></li>
+            
                 <li><a href="http://yoursite.com/2019/01/21/2019年学习的目标/">2019年学习的目标</a></li>
             
-                <li><a href="http://yoursite.com/2019/01/15/vue路由的两种模式hash和history的区别/">vue路由的两种模式hash和history的区别</a></li>
+                <li><a href="http://yoursite.com/2019/01/10/实战Taro出现的坑/">实战Taro出现的坑</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/">实战Taro自定义的下拉刷新和上拉加载</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/29/欢迎来到我的博客/">欢迎来到我的博客</a></li>
             
         </ul>
     </div>
@@ -310,7 +308,7 @@
 
 <script>
     window.subData = {
-        title: '实战Taro出现的坑',
+        title: 'vue路由的两种模式hash和history的区别',
         tools: true
     }
 </script>

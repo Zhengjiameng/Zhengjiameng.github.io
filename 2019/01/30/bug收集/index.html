@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>实战Taro出现的坑 | Alice</title>
+  <title>bug收集 | Alice</title>
   
   
 
@@ -171,13 +171,13 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">实战Taro出现的坑</h1>
+          <h1 class="title">bug收集</h1>
       
     
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-10
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-30
       </time>
     
 
@@ -200,14 +200,12 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>2、引用本地静态资源，用import进去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import searchPng from <span class="string">'../../images/right.png'</span></span><br><span class="line">$  &lt;Image src=&#123;searchPng&#125; className=<span class="string">'right'</span>&gt;&lt;/Image&gt;</span><br></pre></td></tr></table></figure></p>
-<p>3、新增page的时候，需要主动在app.tsx里面添加page页面</p>
+            <h2 id="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><a href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。" class="headerlink" title="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"></a>如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</h2><p><img src="/2019/01/30/bug收集/e01.png" alt="Image text"></p>
 
         </div>
         
           <section class="meta" id="footer-meta">
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-10T16:45:59+08:00" content="2019-01-10"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-10</time>
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-30T09:34:16+08:00" content="2019-01-30"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-30</time>
               
               
 
@@ -217,28 +215,14 @@
         
             <div class="prev-next">
                 
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
-                            <h4>
-                                <a href="/2019/01/15/vue路由的两种模式hash和history的区别/" rel="prev" title="vue路由的两种模式hash和history的区别">
-                                  
-                                      vue路由的两种模式hash和history的区别
-                                  
-                                </a>
-                            </h4>
-                            
-                        </span>
-                    </section>
-                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/" rel="prev" title="实战Taro自定义的下拉刷新和上拉加载">
+                                <a href="/2019/01/23/JS中的require和import区别/" rel="prev" title="JS中的require和import区别">
                                     
-                                        实战Taro自定义的下拉刷新和上拉加载
+                                        JS中的require和import区别
                                     
                                 </a>
                             </h4>
@@ -272,13 +256,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
+                <li><a href="http://yoursite.com/2019/01/23/JS中的require和import区别/">JS中的require和import区别</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/23/随堂笔记/">koa随堂笔记</a></li>
+            
                 <li><a href="http://yoursite.com/2019/01/21/2019年学习的目标/">2019年学习的目标</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/15/vue路由的两种模式hash和history的区别/">vue路由的两种模式hash和history的区别</a></li>
-            
-                <li><a href="http://yoursite.com/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/">实战Taro自定义的下拉刷新和上拉加载</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/29/欢迎来到我的博客/">欢迎来到我的博客</a></li>
             
         </ul>
     </div>
@@ -310,7 +294,7 @@
 
 <script>
     window.subData = {
-        title: '实战Taro出现的坑',
+        title: 'bug收集',
         tools: true
     }
 </script>
@@ -483,6 +467,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="material">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content material">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><span class="toc-text">如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</span></a></li></ol>
+    </div>
+  </section>
+
 
       
     

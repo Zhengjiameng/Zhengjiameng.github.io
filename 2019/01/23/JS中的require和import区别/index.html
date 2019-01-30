@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>实战Taro出现的坑 | Alice</title>
+  <title>JS中的require和import区别 | Alice</title>
   
   
 
@@ -171,13 +171,13 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">实战Taro出现的坑</h1>
+          <h1 class="title">JS中的require和import区别</h1>
       
     
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-10
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-23
       </time>
     
 
@@ -200,14 +200,12 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>1、不能使用push（非常的不方便）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ /*替换方法*/</span><br><span class="line">$ <span class="built_in">let</span> length=this.state.posts.length</span><br><span class="line">      <span class="built_in">let</span> posts=this.state.posts</span><br><span class="line">      posts[length]=&#123;</span><br><span class="line">          id:1,</span><br><span class="line">          title:<span class="string">'次子大婚'</span>+length,</span><br><span class="line">          date:<span class="string">'2017-12-12 12:30'</span>,</span><br><span class="line">          count:<span class="string">'3655'</span>,</span><br><span class="line">          dateCN:<span class="string">'农历大年初一'</span></span><br><span class="line">        &#125;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">          posts</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></p>
-<p>2、引用本地静态资源，用import进去<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ import searchPng from <span class="string">'../../images/right.png'</span></span><br><span class="line">$  &lt;Image src=&#123;searchPng&#125; className=<span class="string">'right'</span>&gt;&lt;/Image&gt;</span><br></pre></td></tr></table></figure></p>
-<p>3、新增page的时候，需要主动在app.tsx里面添加page页面</p>
+            <p>在研究react和webpack的时候，经常看到在js文件中出现require，还有import，这两个都是为了JS模块化编程使用。CSS的是@import<br>原文链接：<a href="https://www.cnblogs.com/liaojie970/p/7376682.html" target="_blank" rel="noopener">JS中的require和import区别</a></p>
 
         </div>
         
           <section class="meta" id="footer-meta">
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-10T16:45:59+08:00" content="2019-01-10"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-10</time>
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-23T12:13:25+08:00" content="2019-01-23"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-23</time>
               
               
 
@@ -221,9 +219,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2019/01/15/vue路由的两种模式hash和history的区别/" rel="prev" title="vue路由的两种模式hash和history的区别">
+                                <a href="/2019/01/30/bug收集/" rel="prev" title="bug收集">
                                   
-                                      vue路由的两种模式hash和history的区别
+                                      bug收集
                                   
                                 </a>
                             </h4>
@@ -236,12 +234,17 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/" rel="prev" title="实战Taro自定义的下拉刷新和上拉加载">
+                                <a href="/2019/01/23/随堂笔记/" rel="prev" title="koa随堂笔记">
                                     
-                                        实战Taro自定义的下拉刷新和上拉加载
+                                        koa随堂笔记
                                     
                                 </a>
                             </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/nvm/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>nvm</a> <a class="tag" href="/tags/node/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>node</a> <a class="tag" href="/tags/webstorm/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>webstorm</a>
+                                </h6>
                             
                         </span>
                     </section>
@@ -272,13 +275,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
+                <li><a href="http://yoursite.com/2019/01/30/bug收集/">bug收集</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/23/随堂笔记/">koa随堂笔记</a></li>
+            
                 <li><a href="http://yoursite.com/2019/01/21/2019年学习的目标/">2019年学习的目标</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/15/vue路由的两种模式hash和history的区别/">vue路由的两种模式hash和history的区别</a></li>
-            
-                <li><a href="http://yoursite.com/2019/01/08/实战Taro自定义的下拉刷新和上拉加载/">实战Taro自定义的下拉刷新和上拉加载</a></li>
-            
-                <li><a href="http://yoursite.com/2018/12/29/欢迎来到我的博客/">欢迎来到我的博客</a></li>
             
         </ul>
     </div>
@@ -310,7 +313,7 @@
 
 <script>
     window.subData = {
-        title: '实战Taro出现的坑',
+        title: 'JS中的require和import区别',
         tools: true
     }
 </script>
