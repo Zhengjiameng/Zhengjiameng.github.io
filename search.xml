@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>实战Taro自定义的下拉刷新和上拉加载</title>
+      <link href="/2019/01/30/%E5%AE%9E%E6%88%98Taro%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E5%92%8C%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+      <url>/2019/01/30/%E5%AE%9E%E6%88%98Taro%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E5%92%8C%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>bug收集</title>
       <link href="/2019/01/30/bug%E6%94%B6%E9%9B%86/"/>
       <url>/2019/01/30/bug%E6%94%B6%E9%9B%86/</url>
       
-        <content type="html"><![CDATA[<h2 id="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><a href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。" class="headerlink" title="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"></a>如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</h2><p><img src="/2019/01/30/bug收集/e01.png" alt="Image text"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><a href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。" class="headerlink" title="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"></a>如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</h2><p><img src="/2019/01/30/bug收集/e01.png" alt="Image text"></p><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Objects-are-not-valid-as-a-React-child-found-object-with-keys-counter-auth-If-you-meant-to-render-a-collection-of-children-use-an-array-instead"><a href="#Objects-are-not-valid-as-a-React-child-found-object-with-keys-counter-auth-If-you-meant-to-render-a-collection-of-children-use-an-array-instead" class="headerlink" title="Objects are not valid as a React child (found: object with keys {counter, auth}). If you meant to render a collection of children, use an array instead."></a>Objects are not valid as a React child (found: object with keys {counter, auth}). If you meant to render a collection of children, use an array instead.</h2><p>将reducer合并的时候，要注意将之前在装饰器里面写的state要变成取单个属性，不然会报错<br><img src="/2019/01/30/bug收集/e02.png" alt="Image text"><br><img src="/2019/01/30/bug收集/e03.png" alt="Image text"></p><h2 id="复杂数据结构的深拷贝和浅拷贝"><a href="#复杂数据结构的深拷贝和浅拷贝" class="headerlink" title="复杂数据结构的深拷贝和浅拷贝"></a>复杂数据结构的深拷贝和浅拷贝</h2><h2 id="简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法"><a href="#简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法" class="headerlink" title="简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法"></a>简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ /*深拷贝*/</span><br><span class="line">$ this.menu_routes = JSON.parse(JSON.stringify(this.routes))</span><br></pre></td></tr></table></figure><p>在项目中，会遇到对路由文件的操作，但是页面不刷新的时候，会发现路由文件被进行多次操作，导致路由文件的数据发生了变化，这是不对的，我们希望每次登陆都会获取一份新的路由数据，而不是上次操作后的路由数据。</p>]]></content>
       
       
       
@@ -34,7 +47,7 @@
       <link href="/2019/01/23/%E9%9A%8F%E5%A0%82%E7%AC%94%E8%AE%B0/"/>
       <url>/2019/01/23/%E9%9A%8F%E5%A0%82%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<h2 id="装NVM的时候装出问题的时候，重新卸载，node无法使用的问题"><a href="#装NVM的时候装出问题的时候，重新卸载，node无法使用的问题" class="headerlink" title="装NVM的时候装出问题的时候，重新卸载，node无法使用的问题"></a>装NVM的时候装出问题的时候，重新卸载，node无法使用的问题</h2><p>装NVM的时候装出问题的时候，重新卸载，node无法使用的时候<br>先安装node，再使用node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable /*安装最新版的node*/</span><br><span class="line">$ nvm use 10.15.0 /*版本号*/</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>然后这时候，你会发现webstorm的node使用不了，那是因为node安装的路径变了，得重新在webstorm里更换nodejs的路径<br><img src="/2019/01/23/随堂笔记/e01.png" alt="Image text"><br>然后这时候，你又发现你的hexo命令行又不能使用了，这时候，又要更改下hexo的环境变量<br><img src="/2019/01/23/随堂笔记/e02.png" alt="Image text"><br><img src="/2019/01/23/随堂笔记/e03.png" alt="Image text"></p><h2 id="断言assert"><a href="#断言assert" class="headerlink" title="断言assert"></a>断言assert</h2><p>判断一个代码的执行结果是否符合预期，如果不符合，就打印出检验失败的日志，方便我们在开发代码或运行的代码的时候，去了解<br>个地方代码运行的结果，或运行错误，调用错误，入参不合法。</p><h2 id="vary-好像很叼"><a href="#vary-好像很叼" class="headerlink" title="vary()好像很叼"></a>vary()好像很叼</h2><h2 id="纯函数"><a href="#纯函数" class="headerlink" title="纯函数"></a>纯函数</h2><p>纯函数：不依赖其他，只有入参和return，非常安全</p><h2 id="koa里面的compose的作用"><a href="#koa里面的compose的作用" class="headerlink" title="koa里面的compose的作用"></a>koa里面的compose的作用</h2><p>koa的compose就是将中间件串联起来运行，当执行next()的时候，就是触发第二个中间件的时候，将执行权交给第二个中间件，所以这就是尾递归<br><img src="/2019/01/23/随堂笔记/e04.png" alt="compose的源码"></p><h2 id="递归调用对堆栈的压力"><a href="#递归调用对堆栈的压力" class="headerlink" title="递归调用对堆栈的压力"></a>递归调用对堆栈的压力</h2><p><img src="/2019/01/23/随堂笔记/e05.png" alt="Image text"><br><img src="/2019/01/23/随堂笔记/e06.png" alt="Image text"></p><h2 id="使用puppeteer做爬虫"><a href="#使用puppeteer做爬虫" class="headerlink" title="使用puppeteer做爬虫"></a>使用puppeteer做爬虫</h2><p>互联网的各种请求其实都是基于各种协议的请求和返回，比如说基于tcp/IP上面的http请求，puppeteer在本地模拟了一个浏览器来请求网页，来爬一下不太好爬的数据，主要是保持主进程的健壮性，分配给了子进程来处理这些事情。</p><h2 id="了解进程的9个问题"><a href="#了解进程的9个问题" class="headerlink" title="了解进程的9个问题"></a>了解进程的9个问题</h2><p><img src="/2019/01/23/随堂笔记/e07.png" alt="Image text"><br>同步异步、阻塞非阻塞<br>如果一个进程在等待另一个进程的完成，这叫做同步阻塞，如果一个进程在等待另一个进程的完成，并且不间断的来轮询这个进程有没有完成，如果这个进程还没完成，他就去做别的事情，这叫做同步非阻塞。这两种情况，等待的进程都是比较被动的，必须自己去轮询在工作的进程是否已经完成<br>如果在进程正在运行的时候，注册一个回调函数，这个进程已经完成，就执行回调，通知另一个进程来执行，这就叫做异步非阻塞<br>如果我已经注册了一个回调函数，但是进程还是在等待另一个进程的完成，这就叫做异步阻塞<br>对于一个系统来说，调用方如果需要被调用方完成手头的事情，并且一直等待他结束，这种调用方式就是同步的，<br>如果调用方不需要一直等待被调用方来响应，那这种调用方式就是异步的，实现这种异步可以通过调用方的主动轮询，也可以通过被调用方的主动通知，<br>也就是执行调用方之前注册号的回调。<br>而阻塞和非阻塞，是指在调用的过程中，调用方在获得消息的状态，如果这个获取是什么都不能做，必须要等待的话，那么就是阻塞，反之就是非阻塞，<br>往往同步的操作会导致阻塞，异步的操作不会发生阻塞，但不是100%如此。<br>一句话收尾：同步异步是过程在于有无消息通知的机制，调用方是主动等待还是被动通知进度，阻塞非阻塞是状态是调用方在获取结果的时候，是干等还是互不干扰，<br>而异步非阻塞就是nodejs的一大卖点<br><a href="https://baijiahao.baidu.com/s?id=1612594086537323804&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">五分钟，捋清同步异步阻塞非阻塞并发并行</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="装NVM的时候装出问题的时候，重新卸载，node无法使用的问题"><a href="#装NVM的时候装出问题的时候，重新卸载，node无法使用的问题" class="headerlink" title="装NVM的时候装出问题的时候，重新卸载，node无法使用的问题"></a>装NVM的时候装出问题的时候，重新卸载，node无法使用的问题</h2><p>装NVM的时候装出问题的时候，重新卸载，node无法使用的时候<br>先安装node，再使用node<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable /*安装最新版的node*/</span><br><span class="line">$ nvm use 10.15.0 /*版本号*/</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>然后这时候，你会发现webstorm的node使用不了，那是因为node安装的路径变了，得重新在webstorm里更换nodejs的路径<br><img src="/2019/01/23/随堂笔记/e01.png" alt="Image text"><br>然后这时候，你又发现你的hexo命令行又不能使用了，这时候，又要更改下hexo的环境变量<br><img src="/2019/01/23/随堂笔记/e02.png" alt="Image text"><br><img src="/2019/01/23/随堂笔记/e03.png" alt="Image text"></p><h2 id="断言assert"><a href="#断言assert" class="headerlink" title="断言assert"></a>断言assert</h2><p>判断一个代码的执行结果是否符合预期，如果不符合，就打印出检验失败的日志，方便我们在开发代码或运行的代码的时候，去了解<br>个地方代码运行的结果，或运行错误，调用错误，入参不合法。</p><h2 id="vary-好像很叼"><a href="#vary-好像很叼" class="headerlink" title="vary()好像很叼"></a>vary()好像很叼</h2><h2 id="纯函数"><a href="#纯函数" class="headerlink" title="纯函数"></a>纯函数</h2><p>纯函数：不依赖其他，只有入参和return，非常安全</p><h2 id="koa里面的compose的作用"><a href="#koa里面的compose的作用" class="headerlink" title="koa里面的compose的作用"></a>koa里面的compose的作用</h2><p>koa的compose就是将中间件串联起来运行，当执行next()的时候，就是触发第二个中间件的时候，将执行权交给第二个中间件，所以这就是尾递归<br><img src="/2019/01/23/随堂笔记/e04.png" alt="compose的源码"></p><h2 id="递归调用对堆栈的压力"><a href="#递归调用对堆栈的压力" class="headerlink" title="递归调用对堆栈的压力"></a>递归调用对堆栈的压力</h2><p><img src="/2019/01/23/随堂笔记/e05.png" alt="Image text"><br><img src="/2019/01/23/随堂笔记/e06.png" alt="Image text"></p><h2 id="使用puppeteer做爬虫"><a href="#使用puppeteer做爬虫" class="headerlink" title="使用puppeteer做爬虫"></a>使用puppeteer做爬虫</h2><p>互联网的各种请求其实都是基于各种协议的请求和返回，比如说基于tcp/IP上面的http请求，puppeteer在本地模拟了一个浏览器来请求网页，来爬一下不太好爬的数据，主要是保持主进程的健壮性，分配给了子进程来处理这些事情。</p><h2 id="了解进程的9个问题"><a href="#了解进程的9个问题" class="headerlink" title="了解进程的9个问题"></a>了解进程的9个问题</h2><p><img src="/2019/01/23/随堂笔记/e07.png" alt="Image text"><br>同步异步、阻塞非阻塞<br>如果一个进程在等待另一个进程的完成，这叫做同步阻塞，如果一个进程在等待另一个进程的完成，并且不间断的来轮询这个进程有没有完成，如果这个进程还没完成，他就去做别的事情，这叫做同步非阻塞。这两种情况，等待的进程都是比较被动的，必须自己去轮询在工作的进程是否已经完成<br>如果在进程正在运行的时候，注册一个回调函数，这个进程已经完成，就执行回调，通知另一个进程来执行，这就叫做异步非阻塞<br>如果我已经注册了一个回调函数，但是进程还是在等待另一个进程的完成，这就叫做异步阻塞<br>对于一个系统来说，调用方如果需要被调用方完成手头的事情，并且一直等待他结束，这种调用方式就是同步的，<br>如果调用方不需要一直等待被调用方来响应，那这种调用方式就是异步的，实现这种异步可以通过调用方的主动轮询，也可以通过被调用方的主动通知，<br>也就是执行调用方之前注册号的回调。<br>而阻塞和非阻塞，是指在调用的过程中，调用方在获得消息的状态，如果这个获取是什么都不能做，必须要等待的话，那么就是阻塞，反之就是非阻塞，<br>往往同步的操作会导致阻塞，异步的操作不会发生阻塞，但不是100%如此。<br>一句话收尾：同步异步是过程在于有无消息通知的机制，调用方是主动等待还是被动通知进度，阻塞非阻塞是状态是调用方在获取结果的时候，是干等还是互不干扰，<br>而异步非阻塞就是nodejs的一大卖点<br><a href="https://baijiahao.baidu.com/s?id=1612594086537323804&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">五分钟，捋清同步异步阻塞非阻塞并发并行</a></p><h2 id="nodejs的Event-Loop"><a href="#nodejs的Event-Loop" class="headerlink" title="nodejs的Event Loop"></a>nodejs的Event Loop</h2><p>nodejs的事件循环机制就是允许nodejs去执行一些nodejs的异步非阻塞的操作这样的一个策略或者机制，<br>事件处理机制有顺序，其中第一层是timers，定时器的回调函数就会在这层执行，</p>]]></content>
       
       
       <categories>
@@ -98,11 +111,11 @@
     
     
     <entry>
-      <title>实战Taro自定义的下拉刷新和上拉加载</title>
-      <link href="/2019/01/08/%E5%AE%9E%E6%88%98Taro%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E5%92%8C%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
-      <url>/2019/01/08/%E5%AE%9E%E6%88%98Taro%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0%E5%92%8C%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/</url>
+      <title>实战Taro父子组件的通讯问题</title>
+      <link href="/2019/01/07/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/01/07/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>其实不叫做父子组件，是page和component之间的通讯，但是想了想，组件也是可以嵌套使用，还是用父子组件来的好</p><h2 id="父组件向子组件传递参数"><a href="#父组件向子组件传递参数" class="headerlink" title="父组件向子组件传递参数"></a>父组件向子组件传递参数</h2><p>主要是通过props来传递属性，暂不细说</p><a id="more"></a><h2 id="子组件触发父组件传递过去的函数"><a href="#子组件触发父组件传递过去的函数" class="headerlink" title="子组件触发父组件传递过去的函数"></a>子组件触发父组件传递过去的函数</h2><p>同样是通过props传递，但是传递的类型不是属性，而是函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ onCallbackParent=&#123;this.goToDetail.bind(this,item)&#125; /*父组件*/</span><br></pre></td></tr></table></figure></p><p>然后在子组件里面触发这个函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;View className=<span class="string">'list'</span> onClick=&#123;this.props.onCallbackParent&#125;&gt;</span><br><span class="line">$    ...</span><br><span class="line">$ &lt;/View&gt; /*子组件*/</span><br></pre></td></tr></table></figure></p><p>这里需要注意的是：1、父组件传递函数的时候，必须要加上‘on’</p><h2 id="子组件触发父组件传递过去的函数的作用"><a href="#子组件触发父组件传递过去的函数的作用" class="headerlink" title="子组件触发父组件传递过去的函数的作用"></a>子组件触发父组件传递过去的函数的作用</h2><p>主要是为了能够将逻辑都写在父组件里，保证子组件的简单，这样子后期复用性高</p>]]></content>
       
       
       
@@ -130,19 +143,6 @@
             <tag> 随笔 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>实战Taro父子组件的通讯问题</title>
-      <link href="/2018/12/28/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/"/>
-      <url>/2018/12/28/%E5%AE%9E%E6%88%98Taro%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E8%AE%AF%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>其实不叫做父子组件，是page和component之间的通讯，但是想了想，组件也是可以嵌套使用，还是用父子组件来的好</p><h2 id="父组件向子组件传递参数"><a href="#父组件向子组件传递参数" class="headerlink" title="父组件向子组件传递参数"></a>父组件向子组件传递参数</h2><p>主要是通过props来传递属性，暂不细说</p><a id="more"></a><h2 id="子组件触发父组件传递过去的函数"><a href="#子组件触发父组件传递过去的函数" class="headerlink" title="子组件触发父组件传递过去的函数"></a>子组件触发父组件传递过去的函数</h2><p>同样是通过props传递，但是传递的类型不是属性，而是函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ onCallbackParent=&#123;this.goToDetail.bind(this,item)&#125; /*父组件*/</span><br></pre></td></tr></table></figure></p><p>然后在子组件里面触发这个函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;View className=<span class="string">'list'</span> onClick=&#123;this.props.onCallbackParent&#125;&gt;</span><br><span class="line">$    ...</span><br><span class="line">$ &lt;/View&gt; /*子组件*/</span><br></pre></td></tr></table></figure></p><p>这里需要注意的是：1、父组件传递函数的时候，必须要加上‘on’</p><h2 id="子组件触发父组件传递过去的函数的作用"><a href="#子组件触发父组件传递过去的函数的作用" class="headerlink" title="子组件触发父组件传递过去的函数的作用"></a>子组件触发父组件传递过去的函数的作用</h2><p>主要是为了能够将逻辑都写在父组件里，保证子组件的简单，这样子后期复用性高</p>]]></content>
-      
-      
       
     </entry>
     

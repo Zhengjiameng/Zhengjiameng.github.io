@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>vue路由的两种模式hash和history的区别 | Alice</title>
+  <title>实战Taro父子组件的通讯问题 | Alice</title>
   
   
 
@@ -171,13 +171,13 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">vue路由的两种模式hash和history的区别</h1>
+          <h1 class="title">实战Taro父子组件的通讯问题</h1>
       
     
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-15
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-07
       </time>
     
 
@@ -200,12 +200,18 @@
     <section class="article typo">
 
         <div class="article-entry" itemprop="articleBody">
-            <p>项目遇到问题，用history打包出现问题：hash路由的话，我们只请求了头部#前面的url路径，其余的#后面的，只是我们的前端路由，用来加载不同的组件，我们并不是通过url来请求后台数据的，<br>我们是通过组件的生命周期调用接口，请求后台数据，用history就会产生将整个url都用做http请求，然后向后台请求数据，当页面刷新的时候，用history就会出现404页面查找不到，<br>这个时候就需要后台配置，将所有的情况，都重定向到index.html</p>
+            <p>其实不叫做父子组件，是page和component之间的通讯，但是想了想，组件也是可以嵌套使用，还是用父子组件来的好</p>
+<h2 id="父组件向子组件传递参数"><a href="#父组件向子组件传递参数" class="headerlink" title="父组件向子组件传递参数"></a>父组件向子组件传递参数</h2><p>主要是通过props来传递属性，暂不细说</p>
+<a id="more"></a>
+<h2 id="子组件触发父组件传递过去的函数"><a href="#子组件触发父组件传递过去的函数" class="headerlink" title="子组件触发父组件传递过去的函数"></a>子组件触发父组件传递过去的函数</h2><p>同样是通过props传递，但是传递的类型不是属性，而是函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ onCallbackParent=&#123;this.goToDetail.bind(this,item)&#125; /*父组件*/</span><br></pre></td></tr></table></figure></p>
+<p>然后在子组件里面触发这个函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &lt;View className=<span class="string">'list'</span> onClick=&#123;this.props.onCallbackParent&#125;&gt;</span><br><span class="line">$    ...</span><br><span class="line">$ &lt;/View&gt; /*子组件*/</span><br></pre></td></tr></table></figure></p>
+<p>这里需要注意的是：1、父组件传递函数的时候，必须要加上‘on’</p>
+<h2 id="子组件触发父组件传递过去的函数的作用"><a href="#子组件触发父组件传递过去的函数的作用" class="headerlink" title="子组件触发父组件传递过去的函数的作用"></a>子组件触发父组件传递过去的函数的作用</h2><p>主要是为了能够将逻辑都写在父组件里，保证子组件的简单，这样子后期复用性高</p>
 
         </div>
         
           <section class="meta" id="footer-meta">
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-15T11:36:12+08:00" content="2019-01-15"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-15</time>
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-07T16:59:30+08:00" content="2019-01-07"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-07</time>
               
               
 
@@ -219,9 +225,9 @@
                         <span class="art-item-left">
                             <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
                             <h4>
-                                <a href="/2019/01/21/2019年学习的目标/" rel="prev" title="2019年学习的目标">
+                                <a href="/2019/01/10/实战Taro出现的坑/" rel="prev" title="实战Taro出现的坑">
                                   
-                                      2019年学习的目标
+                                      实战Taro出现的坑
                                   
                                 </a>
                             </h4>
@@ -234,12 +240,17 @@
                         <span class="art-item-right" aria-hidden="true">
                             <h6>下一篇&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
-                                <a href="/2019/01/10/实战Taro出现的坑/" rel="prev" title="实战Taro出现的坑">
+                                <a href="/2018/12/29/欢迎来到我的博客/" rel="prev" title="欢迎来到我的博客">
                                     
-                                        实战Taro出现的坑
+                                        欢迎来到我的博客
                                     
                                 </a>
                             </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/随笔/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>随笔</a>
+                                </h6>
                             
                         </span>
                     </section>
@@ -270,13 +281,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
-                <li><a href="http://yoursite.com/2019/01/23/随堂笔记/">koa随堂笔记</a></li>
-            
                 <li><a href="http://yoursite.com/2019/01/21/2019年学习的目标/">2019年学习的目标</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/15/vue路由的两种模式hash和history的区别/">vue路由的两种模式hash和history的区别</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/10/实战Taro出现的坑/">实战Taro出现的坑</a></li>
             
-                <li><a href="http://yoursite.com/2019/01/07/实战Taro父子组件的通讯问题/">实战Taro父子组件的通讯问题</a></li>
+                <li><a href="http://yoursite.com/2018/12/29/欢迎来到我的博客/">欢迎来到我的博客</a></li>
             
         </ul>
     </div>
@@ -308,7 +319,7 @@
 
 <script>
     window.subData = {
-        title: 'vue路由的两种模式hash和history的区别',
+        title: '实战Taro父子组件的通讯问题',
         tools: true
     }
 </script>
@@ -481,6 +492,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="material">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" title="固定到顶部" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content material">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#父组件向子组件传递参数"><span class="toc-text">父组件向子组件传递参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子组件触发父组件传递过去的函数"><span class="toc-text">子组件触发父组件传递过去的函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子组件触发父组件传递过去的函数的作用"><span class="toc-text">子组件触发父组件传递过去的函数的作用</span></a></li></ol>
+    </div>
+  </section>
+
 
       
     

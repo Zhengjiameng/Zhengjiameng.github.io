@@ -201,11 +201,14 @@
 
         <div class="article-entry" itemprop="articleBody">
             <h2 id="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><a href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。" class="headerlink" title="如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"></a>如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</h2><p><img src="/2019/01/30/bug收集/e01.png" alt="Image text"></p>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Objects-are-not-valid-as-a-React-child-found-object-with-keys-counter-auth-If-you-meant-to-render-a-collection-of-children-use-an-array-instead"><a href="#Objects-are-not-valid-as-a-React-child-found-object-with-keys-counter-auth-If-you-meant-to-render-a-collection-of-children-use-an-array-instead" class="headerlink" title="Objects are not valid as a React child (found: object with keys {counter, auth}). If you meant to render a collection of children, use an array instead."></a>Objects are not valid as a React child (found: object with keys {counter, auth}). If you meant to render a collection of children, use an array instead.</h2><p>将reducer合并的时候，要注意将之前在装饰器里面写的state要变成取单个属性，不然会报错<br><img src="/2019/01/30/bug收集/e02.png" alt="Image text"><br><img src="/2019/01/30/bug收集/e03.png" alt="Image text"></p>
+<h2 id="复杂数据结构的深拷贝和浅拷贝"><a href="#复杂数据结构的深拷贝和浅拷贝" class="headerlink" title="复杂数据结构的深拷贝和浅拷贝"></a>复杂数据结构的深拷贝和浅拷贝</h2><h2 id="简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法"><a href="#简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法" class="headerlink" title="简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法"></a>简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ /*深拷贝*/</span><br><span class="line">$ this.menu_routes = JSON.parse(JSON.stringify(this.routes))</span><br></pre></td></tr></table></figure>
+<p>在项目中，会遇到对路由文件的操作，但是页面不刷新的时候，会发现路由文件被进行多次操作，导致路由文件的数据发生了变化，这是不对的，我们希望每次登陆都会获取一份新的路由数据，而不是上次操作后的路由数据。</p>
 
         </div>
         
           <section class="meta" id="footer-meta">
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-30T09:34:16+08:00" content="2019-01-30"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-01-30</time>
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-05-09T11:14:24+08:00" content="2019-05-09"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;本文最后更新于：2019-05-09</time>
               
               
 
@@ -214,6 +217,20 @@
 
         
             <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一篇</h6>
+                            <h4>
+                                <a href="/2019/01/30/实战Taro自定义的下拉刷新和上拉加载/" rel="prev" title="实战Taro自定义的下拉刷新和上拉加载">
+                                  
+                                      实战Taro自定义的下拉刷新和上拉加载
+                                  
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
                 
                 
                     <section class="next">
@@ -256,13 +273,13 @@
         <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;你可能感兴趣的文章</h4>
         <ul>
             
+                <li><a href="http://yoursite.com/2019/01/30/实战Taro自定义的下拉刷新和上拉加载/">实战Taro自定义的下拉刷新和上拉加载</a></li>
+            
                 <li><a href="http://yoursite.com/2019/01/23/JS中的require和import区别/">JS中的require和import区别</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/23/随堂笔记/">koa随堂笔记</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/21/2019年学习的目标/">2019年学习的目标</a></li>
-            
-                <li><a href="http://yoursite.com/2019/01/15/vue路由的两种模式hash和history的区别/">vue路由的两种模式hash和history的区别</a></li>
             
         </ul>
     </div>
@@ -477,7 +494,7 @@
 </header>
 
     <div class="content material">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><span class="toc-text">如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。"><span class="toc-text">如果项目出现以下报错，别多想，重新新建一个项目，重新装依赖啥的，比你解决这个error要来的快，搞了2个钟都没搞出来的我，心疼自己。。。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React"><span class="toc-text">React</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objects-are-not-valid-as-a-React-child-found-object-with-keys-counter-auth-If-you-meant-to-render-a-collection-of-children-use-an-array-instead"><span class="toc-text">Objects are not valid as a React child (found: object with keys {counter, auth}). If you meant to render a collection of children, use an array instead.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#复杂数据结构的深拷贝和浅拷贝"><span class="toc-text">复杂数据结构的深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法"><span class="toc-text">简单的数组进行深拷贝，可以使用slice和connact，但是遇到复杂的数据结构进行深拷贝的时候，比如说数组里面嵌套了数组，这时候只是一层外面数组的slice深拷贝，并不能解决内部数组还是引用的同个内存地址，导致对复制出来的数据进行修改的时候，会影响到原来的数据，这个时候，就可以通过下面方法</span></a></li></ol>
     </div>
   </section>
 
